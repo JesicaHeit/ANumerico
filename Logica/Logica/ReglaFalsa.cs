@@ -28,7 +28,7 @@ namespace Logica
             resultado = f(extremoizquierdo) * f(extremoderecho);
             if (resultado > 0)
             {
-                salida.ErrorMsje = ("No se cumple que f(extremoderecho)*f(extremoizquierdo) < 0");
+                salida.ErrorMsje = ("f(x1)*f(x2) > 0");
             }
             if (resultado == 0)
             {

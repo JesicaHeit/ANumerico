@@ -26,7 +26,7 @@ namespace Logica
             double Tolerancia = 0.0001;
             if (f(extremoizquierdo) * f(extremoderecho) > 0)
             {
-                salida.ErrorMsje = ("No se cumple que f(extremoderecho)*f(extremoizquierdo) < 0");
+                salida.ErrorMsje = ("f(x1)*f(x2) > 0");
             }
             else if (f(extremoizquierdo) * f(extremoderecho) == 0)
             {

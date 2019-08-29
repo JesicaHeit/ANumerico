@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             textBox3.Text = 100.ToString();
             textBox4.Text = (0.0001).ToString();
+            textBox5.Visible = false;
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -31,9 +32,27 @@ namespace WindowsFormsApp1
                 salida = regla.MReglaFalsa(x1, x2);
 
 
-                textBox8.Text = salida.Raiz.ToString();
-                textBox7.Text = salida.NroIteraciones.ToString();
-                textBox6.Text = salida.ErrorRelativo.ToString();
+                if (salida.Raiz.ToString() == "NaN" || salida.ErrorRelativo.ToString() == "NaN")
+                {
+
+                    salida.ErrorMsje = "Mal elejidos los extremos";
+                    
+                }
+                else
+                {
+                    
+                    textBox8.Text = salida.Raiz.ToString();
+                    textBox7.Text = salida.NroIteraciones.ToString();
+                    textBox6.Text = salida.ErrorRelativo.ToString();
+                }
+                textBox5.Visible = true;
+                textBox5.Text = salida.ErrorMsje;
+                if (salida.ErrorMsje != null)
+                {
+                    textBox8.Text = 0.ToString();
+                    textBox7.Text = 0.ToString();
+                    textBox6.Text = 0.ToString();
+                }
             }
         }
 
