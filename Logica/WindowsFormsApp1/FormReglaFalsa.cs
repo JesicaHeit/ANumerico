@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
                 if (salida.Raiz.ToString() == "NaN" || salida.ErrorRelativo.ToString() == "NaN")
                 {
 
-                    salida.ErrorMsje = "Mal elejidos los extremos";
+                    salida.ErrorMsje = "Mal elegidos los extremos";
                     
                 }
                 else

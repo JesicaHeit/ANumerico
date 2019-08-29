@@ -192,11 +192,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Modern No. 20", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(259, 21);
+            this.label10.Location = new System.Drawing.Point(302, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(248, 34);
+            this.label10.Size = new System.Drawing.Size(165, 34);
             this.label10.TabIndex = 45;
-            this.label10.Text = "REGLA FALSA";
+            this.label10.Text = "SECANTE";
             // 
             // label9
             // 
