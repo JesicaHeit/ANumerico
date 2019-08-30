@@ -10,9 +10,10 @@ namespace Logica
     {
         public static double f(double x)
         {
-            double e = 2.71828;
-            return ((x * x * x * x * x - 1) * (e * x) - 10);
+            //double e = 2.71828;
+            //return ((x * x * x * x * x - 1) * (e * x) - 10);
             //return ((12.5 * (x + 2)) / (x * x + 4 * x + 5)) + 2;
+            return ((x * x - 3*x + Math.Log(1 + x))-(5 - Math.Sqrt(x)));
 
         }
         public Salida MReglaFalsa(double extremoizquierdo, double extremoderecho)
