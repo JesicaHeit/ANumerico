@@ -10,10 +10,10 @@ namespace Logica
     {
         public static double f(double x)
         {
-            /* double e = 2.71828;
-             return ((x * x * x * x * x - 1) * (e * x) - 10);*/
-            return ((12.5 * (x + 2)) / (x * x + 4 * x + 5)) + 2;
-            //return Math.Abs(x * x - 4) + 2 * x;
+            //double e = 2.71828;
+            return ((x * x * x * x * x - 1) * (Math.Exp(x)) - 10);
+            //return ((12.5 * (x + 2)) / (Math.Pow(x, 2) + 4 * x + 5)) + 2;
+            //return Math.Abs(Math.Pow(x,2) - 4) + 2 * x;
         }
         public Salida MBiseccion(double extremoizquierdo, double extremoderecho)
         {

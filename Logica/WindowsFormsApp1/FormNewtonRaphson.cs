@@ -39,9 +39,9 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    textBox8.Text = salida.Raiz.ToString();
+                    textBox8.Text = Convert.ToDecimal(salida.Raiz).ToString();
                     textBox7.Text = salida.NroIteraciones.ToString();
-                    textBox6.Text = salida.ErrorRelativo.ToString();
+                    textBox6.Text = Convert.ToDecimal(salida.ErrorRelativo).ToString();
                 }
 
                 textBox5.Visible = true;

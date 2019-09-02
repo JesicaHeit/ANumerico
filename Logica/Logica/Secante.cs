@@ -49,7 +49,7 @@ namespace Logica
                     {
 
 
-                        c = c + 1;
+                        c++;
                         xr = ((f(x2) * x1) - (f(x1) * x2)) / (f(x2) - f(x1));
                         error = Math.Abs((xr - xant) / xr);
 
@@ -61,10 +61,9 @@ namespace Logica
 
                     } while ((Math.Abs(f(xr)) > tolerancia) && (c < itermax));
                 }
-
-                salida.Raiz = xr;
-                salida.ErrorRelativo = error;
-                salida.NroIteraciones = c;
+                    salida.Raiz = xr;
+                    salida.ErrorRelativo = error;
+                    salida.NroIteraciones = c;
 
             }
 
