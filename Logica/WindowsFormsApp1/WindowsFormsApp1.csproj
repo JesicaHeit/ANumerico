@@ -52,6 +52,12 @@
     <Compile Include="FormBiseccion.Designer.cs">
       <DependentUpon>FormBiseccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGaussJordan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGaussJordan.Designer.cs">
+      <DependentUpon>FormGaussJordan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNewtonRaphson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBiseccion.resx">
       <DependentUpon>FormBiseccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGaussJordan.resx">
+      <DependentUpon>FormGaussJordan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewtonRaphson.resx">
       <DependentUpon>FormNewtonRaphson.cs</DependentUpon>

@@ -45,5 +45,17 @@ namespace WindowsFormsApp1
             form.Owner = this;
             form.ShowDialog();
         }
+
+        private void UNIDADN1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MetodoGaussJordanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGaussJordan form = new FormGaussJordan();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

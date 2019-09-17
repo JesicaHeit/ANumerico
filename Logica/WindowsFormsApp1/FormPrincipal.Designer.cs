@@ -41,6 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.metodoGaussJordanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metodoGaussSeidelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +70,7 @@
             this.uNIDADN1ToolStripMenuItem.Name = "uNIDADN1ToolStripMenuItem";
             this.uNIDADN1ToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.uNIDADN1ToolStripMenuItem.Text = "UNIDAD N° 1";
+            this.uNIDADN1ToolStripMenuItem.Click += new System.EventHandler(this.UNIDADN1ToolStripMenuItem_Click);
             // 
             // bISECCIONToolStripMenuItem
             // 
@@ -99,6 +102,9 @@
             // 
             // uNIDADN2ToolStripMenuItem
             // 
+            this.uNIDADN2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.metodoGaussJordanToolStripMenuItem,
+            this.metodoGaussSeidelToolStripMenuItem});
             this.uNIDADN2ToolStripMenuItem.Name = "uNIDADN2ToolStripMenuItem";
             this.uNIDADN2ToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.uNIDADN2ToolStripMenuItem.Text = "UNIDAD N° 2";
@@ -150,6 +156,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Albrecht Eugenia - Heit Jesica";
             // 
+            // metodoGaussJordanToolStripMenuItem
+            // 
+            this.metodoGaussJordanToolStripMenuItem.Name = "metodoGaussJordanToolStripMenuItem";
+            this.metodoGaussJordanToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.metodoGaussJordanToolStripMenuItem.Text = "Metodo Gauss Jordan";
+            this.metodoGaussJordanToolStripMenuItem.Click += new System.EventHandler(this.MetodoGaussJordanToolStripMenuItem_Click);
+            // 
+            // metodoGaussSeidelToolStripMenuItem
+            // 
+            this.metodoGaussSeidelToolStripMenuItem.Name = "metodoGaussSeidelToolStripMenuItem";
+            this.metodoGaussSeidelToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.metodoGaussSeidelToolStripMenuItem.Text = "Metodo Gauss Seidel";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +203,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem metodoGaussJordanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metodoGaussSeidelToolStripMenuItem;
     }
 }
 
