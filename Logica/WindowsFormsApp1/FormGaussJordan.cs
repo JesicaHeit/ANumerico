@@ -55,21 +55,33 @@ namespace WindowsFormsApp1
 
         }
 
+        private void dibujarResultado(double[,] matriz,int tamMatriz)
+        {
+            Operaciones.Text += Environment.NewLine;
+            Operaciones.Text += "* Resultados Finales : " + Environment.NewLine;
+
+            for (int i = 0; i <= tamMatriz - 1; i++)
+            {
+                Operaciones.Text += "Valor x" + i + " : " + matriz[i, tamMatriz] + Environment.NewLine;
+            }
+
+            Operaciones.Text += "Proceso terminado" + Environment.NewLine;
+
+        }
+
         private void Button2_Click(object sender, EventArgs e)
         {
-            
+            Salida sali = new Salida();
             int cantelem = int.Parse(textBox1.Text);
-            decimal[,] matriz = new decimal[cantelem, cantelem + 1];
+            double[,] matriz = new double[cantelem, cantelem + 1];
 
-            decimal[] v = new decimal[(cantelem * cantelem) + cantelem];
+            double[] v = new double[(cantelem * cantelem) + cantelem];
             int i = 0;
             foreach (TextBox txt in panel2.Controls.OfType<TextBox>())
             {
-                v[i] = Convert.ToDecimal(txt.Text);
+                v[i] = Convert.ToDouble(txt.Text);
                 i++;
             }
-
-
 
             int xv = 0;
             for (int ym = 0; ym < cantelem + 1; ym++)
@@ -82,7 +94,10 @@ namespace WindowsFormsApp1
             }
 
             GaussJordan gauss = new GaussJordan();
-            gauss.Gauss(matriz);
+            gauss.Calcular(matriz,cantelem);
+            
+
+            dibujarResultado(matriz,cantelem);
 
         }
     }

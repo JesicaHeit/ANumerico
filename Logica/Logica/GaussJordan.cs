@@ -8,44 +8,35 @@ namespace Logica
 {
     public class GaussJordan
     {
-        public Salida Gauss (decimal[,] matriz)
+        public double[] Calcular(double[,] M, int tamaño) //matriz llena como parámetro
         {
-            Salida salida = new Salida();
-            int tamañomatriz = matriz.GetUpperBound(1);
-            int pivote = 0;
-            for (int i=0; i<=tamañomatriz-1; i++)
+            double [] V = new double [tamaño];
+            for (int i = 0; i <= tamaño - 1; i++)
             {
-                if (matriz[i,i]==0)
+                double coeficiente = M[i, i];
+                for (int j = 0; j <= tamaño; j++)
                 {
-                    salida.ErrorMsje = "No es posible resolver la ecuacion"; 
+                    M[i, j] = M[i, j] / coeficiente;
                 }
-                else
+                for (int j = 0; j <= tamaño - 1; j++)
                 {
-                    if (matriz[i,i]!=1)
+                    if (i != j)
                     {
-                        decimal pivotedivisor = matriz[i, i];
-                        for (int col=0; col<=tamañomatriz;col++)
+                        coeficiente = M[j, i];
+                        for (int k = 0; k <= tamaño; k++)
                         {
-                            matriz[i, col] = matriz[i, col] / pivotedivisor;
-                        }
-                    }
-                    for (int renglon=0; renglon < tamañomatriz;renglon++)
-                    {
-                        if (renglon!=pivote)
-                        {
-                            decimal val0 = Convert.ToDecimal(matriz[renglon, i]);
-
-                            for (int columna=0; columna <= tamañomatriz;columna++)
-                            {
-                                matriz[renglon, columna] = matriz[renglon, columna] - ( matriz[i, columna]* val0);
-                            }
+                            M[j, k] = M[j, k] - (coeficiente * M[i, k]);
                         }
                     }
                 }
-                pivote++;
-                
             }
-            return salida;
+            for (int i = 0; i <= tamaño - 1; i++)
+            {
+                V[i] = M[i, tamaño];
+            }
+            return V;
         }
+
     }
 }
+

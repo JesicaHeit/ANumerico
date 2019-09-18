@@ -13,5 +13,9 @@ namespace Logica
         public string MejorSolucion { get; set; }
         public double Raiz { get; set; }
         public string ErrorMsje { get; set; }
+
+        public double x { get; set; }
+        public double y { get; set; }
+        public double z { get; set; }
     }
 }
