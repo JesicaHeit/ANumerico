@@ -8,33 +8,34 @@ namespace Logica
 {
     public class GaussJordan
     {
-        public double[] Calcular(double[,] M, int tamaño) //matriz llena como parámetro
+        public double[] Gauss(double[,] matriz, int tamaño)
         {
-            double [] V = new double [tamaño];
+            double[] v = new double[tamaño];
+
             for (int i = 0; i <= tamaño - 1; i++)
             {
-                double coeficiente = M[i, i];
-                for (int j = 0; j <= tamaño; j++)
+                double coeficiente = matriz[i, i];
+                for (int x = 0; x <= tamaño; x++)
                 {
-                    M[i, j] = M[i, j] / coeficiente;
+                    matriz[i, x] = matriz[i, x] / coeficiente;
                 }
-                for (int j = 0; j <= tamaño - 1; j++)
+                for (int y = 0; y <= tamaño - 1; y++)
                 {
-                    if (i != j)
+                    if (i != y)
                     {
-                        coeficiente = M[j, i];
+                        coeficiente = matriz[y, i];
                         for (int k = 0; k <= tamaño; k++)
                         {
-                            M[j, k] = M[j, k] - (coeficiente * M[i, k]);
+                            matriz[y, k] = matriz[y, k] - (coeficiente * matriz[i, k]);
                         }
                     }
                 }
             }
-            for (int i = 0; i <= tamaño - 1; i++)
+            for (int k = 0; k <= tamaño - 1; k++)
             {
-                V[i] = M[i, tamaño];
+                v[k] = matriz[k, tamaño];
             }
-            return V;
+            return v;
         }
 
     }

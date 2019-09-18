@@ -22,8 +22,8 @@ namespace WindowsFormsApp1
         {
             GaussJordan gauss = new GaussJordan();
             int cantelementos = int.Parse(textBox1.Text);
-            int pointx = 10;
-            int pointy = 100;
+            int pointx = 70;
+            int pointy = 70;
       
             panel2.Controls.Clear();
 
@@ -34,22 +34,24 @@ namespace WindowsFormsApp1
                     TextBox text = new TextBox();
                     string nombre = "txt" + j + i;
                     text.Name = nombre;
-                    text.BackColor = Color.MediumVioletRed;
+                    text.BackColor = Color.PaleVioletRed;
                     text.Location= new Point(pointx, pointy);
+                    text.Size = new Size(40, 40);
                     panel2.Controls.Add(text);
                     pointy += 40;
                 }
                 
-                pointx += 110;
-                pointy = 100;
+                pointx += 70;
+                pointy = 70;
             }
             for (int u = 0; u < cantelementos; u++)
             {
                 TextBox text = new TextBox();
                 string nombre = "txt" + u;
                 text.Name = nombre;
-                text.BackColor = Color.BlueViolet;
+                text.BackColor = Color.Violet;
                 text.Location = new Point(pointx, pointy);
+                text.Size = new Size(40,40);
                 panel2.Controls.Add(text);
                 pointy += 40;
             }
@@ -84,7 +86,7 @@ namespace WindowsFormsApp1
             }
 
             GaussJordan gauss = new GaussJordan();
-            vect= gauss.Calcular(matriz,cantelem);
+            vect= gauss.Gauss(matriz,cantelem);
             for (int x=0; x< cantelem; x++)
             {
                 Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
