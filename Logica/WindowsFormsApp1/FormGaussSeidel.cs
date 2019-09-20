@@ -24,6 +24,9 @@ namespace WindowsFormsApp1
         public void FormGaussSeidel_Load(object sender, EventArgs e)
         {
            GaussSeidel newgaus = new GaussSeidel();
+           label4.Visible = false;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,11 +106,20 @@ namespace WindowsFormsApp1
             {
                 Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
             }
+            label4.Visible = true;
+            label4.Size = new Size(60, 30);
+            label4.Text = $"Cantidad de iteraciones: {GSeidel.iteracionesUtilizadas}";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
