@@ -57,5 +57,17 @@ namespace WindowsFormsApp1
             form.Owner = this;
             form.ShowDialog();
         }
+
+        private void uNIDADN2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metodoGaussSeidelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGaussSeidel form = new FormGaussSeidel();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

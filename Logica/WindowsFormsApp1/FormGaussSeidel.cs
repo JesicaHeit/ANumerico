@@ -11,14 +11,22 @@ using Logica;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormGaussJordan : Form
+    public partial class FormGaussSeidel : Form
     {
-        public FormGaussJordan()
+        public int cantidadElementos { get; set; }
+        public GaussSeidel GSeidel { get; set; }
+
+        public FormGaussSeidel()
         {
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        public void FormGaussSeidel_Load(object sender, EventArgs e)
+        {
+           GaussSeidel newgaus = new GaussSeidel();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             if (Operaciones.Text != "")
             {
@@ -26,94 +34,80 @@ namespace WindowsFormsApp1
                 Operaciones.Focus();
             }
 
-            GaussJordan gauss = new GaussJordan();
-            int cantelementos = int.Parse(textBox1.Text);
-            int pointx = 30;
+            GSeidel = new GaussSeidel();
+            int cantidadElementos = int.Parse(textBox1.Text);
+            GSeidel.cantidadElementos = int.Parse(textBox1.Text);
+            cantidadElementos = GSeidel.cantidadElementos;
+
+            int pointx = 70;
             int pointy = 70;
-      
+
             panel2.Controls.Clear();
 
-            for (int j=0; j< int.Parse(textBox1.Text);j++)
+            for (int j = 0; j < int.Parse(textBox1.Text); j++)
             {
-                for (int i=0; i< int.Parse(textBox1.Text);i++)
+                for (int i = 0; i < int.Parse(textBox1.Text); i++)
                 {
                     TextBox text = new TextBox();
                     string nombre = "txt" + j + i;
                     text.Name = nombre;
                     text.BackColor = Color.PaleVioletRed;
-                    text.Location= new Point(pointx, pointy);
-                    text.Size = new Size(60, 100);
+                    text.Location = new Point(pointx, pointy);
+                    text.Size = new Size(40, 40);
                     panel2.Controls.Add(text);
                     pointy += 40;
                 }
-                
+
                 pointx += 70;
                 pointy = 70;
             }
-            for (int u = 0; u < cantelementos; u++)
+            for (int u = 0; u < cantidadElementos; u++)
             {
                 TextBox text = new TextBox();
                 string nombre = "txt" + u;
                 text.Name = nombre;
                 text.BackColor = Color.Violet;
                 text.Location = new Point(pointx, pointy);
-                text.Size = new Size(60,100);
+                text.Size = new Size(40, 40);
                 panel2.Controls.Add(text);
                 pointy += 40;
             }
 
-
         }
 
-
-        private void Button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Salida sali = new Salida();
-            int cantelem = int.Parse(textBox1.Text);
-            double [] vect = new double [cantelem];
-            double[,] matriz = new double[cantelem, cantelem + 1];
+            int cantidadElementos = int.Parse(textBox1.Text);
+            double[] vect;
+            double[,] matriz2 = new double[cantidadElementos, cantidadElementos + 1];
 
-            double[] v = new double[(cantelem * cantelem) + cantelem];
+            double[] v = new double[(cantidadElementos * cantidadElementos) + cantidadElementos];
             int i = 0;
             foreach (TextBox txt in panel2.Controls.OfType<TextBox>())
             {
                 v[i] = Convert.ToDouble(txt.Text);
                 i++;
             }
-
             int xv = 0;
-            for (int ym = 0; ym < cantelem + 1; ym++)
+            for (int ym = 0; ym < cantidadElementos + 1; ym++)
             {
-                for (int xm = 0; xm < cantelem; xm++)
+                for (int xm = 0; xm < cantidadElementos; xm++)
                 {
-                    matriz[xm, ym] = v[xv];
+                    matriz2[xm, ym] = v[xv];
                     xv++;
                 }
             }
 
-            GaussJordan gauss = new GaussJordan();
-            vect= gauss.Gauss(matriz,cantelem);
-            for (int x=0; x< cantelem; x++)
+            vect = GSeidel.MGaussSeidel(matriz2);
+            for (int x = 0; x < cantidadElementos; x++)
             {
                 Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
             }
-
-
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
