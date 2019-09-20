@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         {
             GaussJordan gauss = new GaussJordan();
             int cantelementos = int.Parse(textBox1.Text);
-            int pointx = 70;
+            int pointx = 30;
             int pointy = 70;
       
             panel2.Controls.Clear();
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
                     text.Name = nombre;
                     text.BackColor = Color.PaleVioletRed;
                     text.Location= new Point(pointx, pointy);
-                    text.Size = new Size(40, 40);
+                    text.Size = new Size(60, 100);
                     panel2.Controls.Add(text);
                     pointy += 40;
                 }
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
                 text.Name = nombre;
                 text.BackColor = Color.Violet;
                 text.Location = new Point(pointx, pointy);
-                text.Size = new Size(40,40);
+                text.Size = new Size(60,100);
                 panel2.Controls.Add(text);
                 pointy += 40;
             }
