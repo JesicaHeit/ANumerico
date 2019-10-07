@@ -13,7 +13,8 @@ namespace Logica
             //double e = 2.71828;
             //return ((x * x * x * x * x - 1) * (x*x) - 10);
             //return ((12.5 * (x + 2)) / (Math.Pow(x, 2) + 4 * x + 5)) + 2;
-            return ((Math.Pow(x,2) - 3*x + Math.Log(1 + x))-(5 - Math.Sqrt(x)));
+            //return ((Math.Pow(x,2) - 3*x + Math.Log(1 + x))-(5 - Math.Sqrt(x)));
+            return (((10 * x + 20) / (x * x + 4 * x + 5)) + 2);
 
         }
         public Salida MReglaFalsa(double extremoizquierdo, double extremoderecho)

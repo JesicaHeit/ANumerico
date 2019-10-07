@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.regresionLinealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +127,8 @@
             // 
             // uNIDADN3ToolStripMenuItem
             // 
+            this.uNIDADN3ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.regresionLinealToolStripMenuItem});
             this.uNIDADN3ToolStripMenuItem.Name = "uNIDADN3ToolStripMenuItem";
             this.uNIDADN3ToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.uNIDADN3ToolStripMenuItem.Text = "UNIDAD N° 3";
@@ -171,6 +174,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Albrecht Eugenia - Heit Jesica";
             // 
+            // regresionLinealToolStripMenuItem
+            // 
+            this.regresionLinealToolStripMenuItem.Name = "regresionLinealToolStripMenuItem";
+            this.regresionLinealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regresionLinealToolStripMenuItem.Text = "Regresion Lineal";
+            this.regresionLinealToolStripMenuItem.Click += new System.EventHandler(this.RegresionLinealToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +217,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem metodoGaussJordanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem metodoGaussSeidelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem regresionLinealToolStripMenuItem;
     }
 }
 

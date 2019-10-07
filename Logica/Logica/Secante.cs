@@ -12,7 +12,8 @@ namespace Logica
         {
             //return Math.Log(x) + (1 / x) - 3;
             //return ((12.5 * (x + 2)) / (Math.Pow(x, 2) + 4 * x + 5)) + 2;
-            return Math.Abs(Math.Pow(x, 2) - 4) + 2 * x;
+            // return Math.Abs(Math.Pow(x, 2) - 4) + 2 * x;
+            return (((10 * x + 20) / (x * x + 4 * x + 5)) + 2);
         }
 
 

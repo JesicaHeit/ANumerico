@@ -82,6 +82,12 @@
     <Compile Include="FormReglaFalsa.Designer.cs">
       <DependentUpon>FormReglaFalsa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegresionLineal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegresionLineal.Designer.cs">
+      <DependentUpon>FormRegresionLineal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSecante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReglaFalsa.resx">
       <DependentUpon>FormReglaFalsa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegresionLineal.resx">
+      <DependentUpon>FormRegresionLineal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSecante.resx">
       <DependentUpon>FormSecante.cs</DependentUpon>

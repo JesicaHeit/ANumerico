@@ -69,5 +69,13 @@ namespace WindowsFormsApp1
             form.Owner = this;
             form.ShowDialog();
         }
+
+        private void RegresionLinealToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegresionLineal form = new FormRegresionLineal();
+            form.Owner = this;
+            form.ShowDialog();
+
+        }
     }
 }

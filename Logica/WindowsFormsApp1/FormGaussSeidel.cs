@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
                 pointx += 70;
                 pointy = 70;
             }
-            for (int u = 0; u < cantidadElementos; u++)
+           /* for (int u = 0; u < cantidadElementos; u++)
             {
                 TextBox text = new TextBox();
                 string nombre = "txt" + u;
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
                 text.Size = new Size(40, 40);
                 panel2.Controls.Add(text);
                 pointy += 40;
-            }
+            }*/
 
         }
 
