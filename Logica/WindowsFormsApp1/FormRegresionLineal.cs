@@ -51,5 +51,38 @@ namespace WindowsFormsApp1
             }
            
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+           // Salida sali = new Salida();
+            int cantelem = int.Parse(textBox1.Text);
+            double[] vect = new double[cantelem];
+            double[,] matriz = new double[cantelem, 2];
+
+            double[] v = new double[(cantelem * 2) + cantelem];
+            int i = 0;
+            foreach (TextBox txt in panel2.Controls.OfType<TextBox>())
+            {
+                v[i] = Convert.ToDouble(txt.Text);
+                i++;
+            }
+
+            int xv = 0;
+            for (int ym = 0; ym < 2; ym++)
+            {
+                for (int xm = 0; xm < cantelem; xm++)
+                {
+                    matriz[xm, ym] = v[xv];
+                    xv++;
+                }
+            }
+
+            //GaussJordan gauss = new GaussJordan();
+            //vect = gauss.Gauss(matriz, cantelem);
+            /*for (int x = 0; x < cantelem; x++)
+            {
+                Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
+            }*/
+        }
     }
 }
