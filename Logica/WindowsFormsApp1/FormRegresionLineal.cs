@@ -77,6 +77,44 @@ namespace WindowsFormsApp1
                 }
             }
 
+            double xdos = 0;
+            double sumxpory = 0;
+            double sumx = 0;
+            double sumy = 0;
+            double[] vectoruno = new double[cantelem];
+            double[] vectordos = new double[cantelem];
+            for (int t = 0; t<cantelem;t++)
+            {
+                //filas cantelementos
+                vectoruno[t] = matriz[t, 1]; //X
+                sumx = sumx + vectoruno[t];
+                vectordos[t] = matriz[t, 2]; //Y
+                sumy = sumy + vectordos[t];
+                sumxpory = sumxpory + (vectoruno[t] + vectordos[t]);
+                xdos = Math.Pow(vectoruno[t], 2);
+                //vectores con elementos formados. x e y.
+
+            }
+            double promy = 0;
+            double promx = 0;
+            promy = sumy / cantelem;
+            promx = sumx / cantelem;
+
+            double a1 = 0;
+            double a0 = 0;
+
+            a1 = ((cantelem * sumxpory) - (sumx * sumy)) / ((cantelem * xdos) - (Math.Pow(xdos,2)));
+            a0 = promy - (a1 * promx);
+
+
+
+            /*
+            for (int x = 0; x < cantidadElementos; x++)
+            {
+                Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
+            }*/
+
+
             //GaussJordan gauss = new GaussJordan();
             //vect = gauss.Gauss(matriz, cantelem);
             /*for (int x = 0; x < cantelem; x++)
