@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReglaFalsa.cs" />
     <Compile Include="RegresionLinealcs.cs" />
+    <Compile Include="RegresionPolinomial.cs" />
     <Compile Include="Salida.cs" />
     <Compile Include="Secante.cs" />
   </ItemGroup>
