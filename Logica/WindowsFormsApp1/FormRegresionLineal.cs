@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
 
         private void Button2_Click(object sender, EventArgs e)
         {
-           // Salida sali = new Salida();
+            // Salida sali = new Salida();
             int cantelem = int.Parse(textBox1.Text);
             double[] vect = new double[cantelem];
             double[,] matriz = new double[cantelem, 2];
@@ -81,17 +81,18 @@ namespace WindowsFormsApp1
             double sumxpory = 0;
             double sumx = 0;
             double sumy = 0;
+
             double[] vectoruno = new double[cantelem];
             double[] vectordos = new double[cantelem];
-            for (int t = 0; t<cantelem;t++)
+            for (int t = 0; t < cantelem; t++)
             {
                 //filas cantelementos
-                vectoruno[t] = matriz[t, 1]; //X
+                vectoruno[t] = matriz[t, 0]; //X
                 sumx = sumx + vectoruno[t];
-                vectordos[t] = matriz[t, 2]; //Y
+                vectordos[t] = matriz[t, 1]; //Y
                 sumy = sumy + vectordos[t];
-                sumxpory = sumxpory + (vectoruno[t] + vectordos[t]);
-                xdos = Math.Pow(vectoruno[t], 2);
+                sumxpory = sumxpory + (vectoruno[t] * vectordos[t]);
+                xdos = xdos + Math.Pow(vectoruno[t], 2);
                 //vectores con elementos formados. x e y.
 
             }
@@ -103,16 +104,47 @@ namespace WindowsFormsApp1
             double a1 = 0;
             double a0 = 0;
 
-            a1 = ((cantelem * sumxpory) - (sumx * sumy)) / ((cantelem * xdos) - (Math.Pow(xdos,2)));
+            a1 = ((cantelem * sumxpory) - (sumx * sumy)) / ((cantelem * xdos) - (Math.Pow(sumx, 2)));
             a0 = promy - (a1 * promx);
 
-
-
-            /*
-            for (int x = 0; x < cantidadElementos; x++)
+            double st = 0;
+            double calculo = 0;
+            double calculo2 = 0;
+            double sr = 0;
+            for (int m = 0; m < cantelem; m++)
             {
-                Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
-            }*/
+                calculo = (sumy / cantelem) - vectordos[m];
+                st = st + (Math.Pow(calculo, 2));
+                calculo2 = ((a1 * vectoruno[m]) + a0 - vectordos[m]);
+                sr = sr + Math.Pow(calculo2, 2);
+
+            }
+
+            double raiz = 0;
+            double r = 0;
+            raiz = Math.Sqrt((st - sr));
+            r = (raiz / st) * 100;
+
+            double[] vectorfinal = new double[5];
+            vectorfinal[1] = a0;
+            vectorfinal[0] = a1;
+            vectorfinal[2] = st;
+            vectorfinal[3] = sr;
+            vectorfinal[4] = r;
+
+            Operaciones.Text = "VALOR a0 = " + vectorfinal[1] + Environment.NewLine +
+                                "VALOR a1 = " + vectorfinal[0] + Environment.NewLine +
+                                "VALOR st = " + vectorfinal[2] + Environment.NewLine +
+                                "VALOR sr = " + vectorfinal[3] + Environment.NewLine +
+                                "VALOR r = " + vectorfinal[4] + Environment.NewLine;
+
+
+
+                /*
+                for (int x = 0; x < cantidadElementos; x++)
+                {
+                    Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
+                }*/
 
 
             //GaussJordan gauss = new GaussJordan();
@@ -121,6 +153,6 @@ namespace WindowsFormsApp1
             {
                 Operaciones.Text += "Valor x" + x + " : " + vect[x] + Environment.NewLine;
             }*/
-        }
+            }
     }
 }
