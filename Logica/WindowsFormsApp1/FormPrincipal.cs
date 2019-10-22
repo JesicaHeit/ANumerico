@@ -77,5 +77,12 @@ namespace WindowsFormsApp1
             form.ShowDialog();
 
         }
+
+        private void RegresionPolinomialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRegresionPolinomial form = new FormRegresionPolinomial();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

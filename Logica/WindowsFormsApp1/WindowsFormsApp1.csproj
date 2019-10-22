@@ -88,6 +88,12 @@
     <Compile Include="FormRegresionLineal.Designer.cs">
       <DependentUpon>FormRegresionLineal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegresionPolinomial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegresionPolinomial.Designer.cs">
+      <DependentUpon>FormRegresionPolinomial.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSecante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegresionLineal.resx">
       <DependentUpon>FormRegresionLineal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegresionPolinomial.resx">
+      <DependentUpon>FormRegresionPolinomial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSecante.resx">
       <DependentUpon>FormSecante.cs</DependentUpon>
