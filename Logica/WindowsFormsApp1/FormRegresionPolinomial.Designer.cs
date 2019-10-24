@@ -47,7 +47,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(306, 412);
+            this.button3.Location = new System.Drawing.Point(215, 512);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 23);
             this.button3.TabIndex = 66;
@@ -94,7 +94,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(658, 412);
+            this.label2.Location = new System.Drawing.Point(658, 511);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 29);
             this.label2.TabIndex = 62;
@@ -104,13 +104,13 @@
             // 
             this.Operaciones.Location = new System.Drawing.Point(406, 213);
             this.Operaciones.Name = "Operaciones";
-            this.Operaciones.Size = new System.Drawing.Size(292, 179);
+            this.Operaciones.Size = new System.Drawing.Size(292, 243);
             this.Operaciones.TabIndex = 60;
             this.Operaciones.Text = "";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(50, 412);
+            this.button2.Location = new System.Drawing.Point(48, 512);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 23);
             this.button2.TabIndex = 59;
@@ -139,7 +139,7 @@
             // 
             this.panel2.Location = new System.Drawing.Point(12, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(363, 315);
+            this.panel2.Size = new System.Drawing.Size(363, 397);
             this.panel2.TabIndex = 56;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
@@ -149,7 +149,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, -24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(880, 507);
+            this.pictureBox1.Size = new System.Drawing.Size(880, 583);
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 450);
+            this.ClientSize = new System.Drawing.Size(872, 547);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);

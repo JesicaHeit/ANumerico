@@ -70,6 +70,12 @@
     <Compile Include="FormNewtonRaphson.Designer.cs">
       <DependentUpon>FormNewtonRaphson.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPolinomioLagrange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPolinomioLagrange.Designer.cs">
+      <DependentUpon>FormPolinomioLagrange.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewtonRaphson.resx">
       <DependentUpon>FormNewtonRaphson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPolinomioLagrange.resx">
+      <DependentUpon>FormPolinomioLagrange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

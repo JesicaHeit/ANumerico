@@ -40,11 +40,12 @@
             this.metodoGaussSeidelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uNIDADN3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresionLinealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regresionPolinomialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uNIDADN4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.regresionPolinomialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polinomioDeLagrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +131,8 @@
             // 
             this.uNIDADN3ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.regresionLinealToolStripMenuItem,
-            this.regresionPolinomialToolStripMenuItem});
+            this.regresionPolinomialToolStripMenuItem,
+            this.polinomioDeLagrangeToolStripMenuItem});
             this.uNIDADN3ToolStripMenuItem.Name = "uNIDADN3ToolStripMenuItem";
             this.uNIDADN3ToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.uNIDADN3ToolStripMenuItem.Text = "UNIDAD N° 3";
@@ -138,9 +140,16 @@
             // regresionLinealToolStripMenuItem
             // 
             this.regresionLinealToolStripMenuItem.Name = "regresionLinealToolStripMenuItem";
-            this.regresionLinealToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regresionLinealToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.regresionLinealToolStripMenuItem.Text = "Regresion Lineal";
             this.regresionLinealToolStripMenuItem.Click += new System.EventHandler(this.RegresionLinealToolStripMenuItem_Click);
+            // 
+            // regresionPolinomialToolStripMenuItem
+            // 
+            this.regresionPolinomialToolStripMenuItem.Name = "regresionPolinomialToolStripMenuItem";
+            this.regresionPolinomialToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.regresionPolinomialToolStripMenuItem.Text = "Regresion Polinomial";
+            this.regresionPolinomialToolStripMenuItem.Click += new System.EventHandler(this.RegresionPolinomialToolStripMenuItem_Click);
             // 
             // uNIDADN4ToolStripMenuItem
             // 
@@ -183,12 +192,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Albrecht Eugenia - Heit Jesica";
             // 
-            // regresionPolinomialToolStripMenuItem
+            // polinomioDeLagrangeToolStripMenuItem
             // 
-            this.regresionPolinomialToolStripMenuItem.Name = "regresionPolinomialToolStripMenuItem";
-            this.regresionPolinomialToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.regresionPolinomialToolStripMenuItem.Text = "Regresion Polinomial";
-            this.regresionPolinomialToolStripMenuItem.Click += new System.EventHandler(this.RegresionPolinomialToolStripMenuItem_Click);
+            this.polinomioDeLagrangeToolStripMenuItem.Name = "polinomioDeLagrangeToolStripMenuItem";
+            this.polinomioDeLagrangeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.polinomioDeLagrangeToolStripMenuItem.Text = "Polinomio de Lagrange";
+            this.polinomioDeLagrangeToolStripMenuItem.Click += new System.EventHandler(this.PolinomioDeLagrangeToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -228,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem metodoGaussSeidelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regresionLinealToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regresionPolinomialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polinomioDeLagrangeToolStripMenuItem;
     }
 }
 

@@ -84,5 +84,12 @@ namespace WindowsFormsApp1
             form.Owner = this;
             form.ShowDialog();
         }
+
+        private void PolinomioDeLagrangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPolinomioLagrange form = new FormPolinomioLagrange();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

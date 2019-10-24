@@ -45,12 +45,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(244, 409);
+            this.button3.Location = new System.Drawing.Point(256, 520);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 23);
             this.button3.TabIndex = 55;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label10
             // 
@@ -91,7 +92,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(584, 401);
+            this.label2.Location = new System.Drawing.Point(586, 514);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 29);
             this.label2.TabIndex = 51;
@@ -101,13 +102,13 @@
             // 
             this.Operaciones.Location = new System.Drawing.Point(517, 168);
             this.Operaciones.Name = "Operaciones";
-            this.Operaciones.Size = new System.Drawing.Size(269, 118);
+            this.Operaciones.Size = new System.Drawing.Size(269, 218);
             this.Operaciones.TabIndex = 49;
             this.Operaciones.Text = "";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(49, 409);
+            this.button2.Location = new System.Drawing.Point(74, 520);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 23);
             this.button2.TabIndex = 48;
@@ -136,7 +137,7 @@
             // 
             this.panel2.Location = new System.Drawing.Point(10, 94);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(467, 303);
+            this.panel2.Size = new System.Drawing.Size(467, 400);
             this.panel2.TabIndex = 45;
             // 
             // pictureBox1
@@ -145,7 +146,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 444);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 562);
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
@@ -153,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 555);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label3);
