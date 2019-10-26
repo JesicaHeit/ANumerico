@@ -122,8 +122,8 @@ namespace WindowsFormsApp1
 
             double raiz = 0;
             double r = 0;
-            raiz = Math.Sqrt((st - sr));
-            r = (raiz / st) * 100;
+            raiz = Math.Sqrt((st - sr) / st);
+            r = raiz * 100;
 
             double[] vectorfinal = new double[5];
             vectorfinal[1] = a0;
