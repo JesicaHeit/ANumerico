@@ -55,7 +55,6 @@ namespace WindowsFormsApp1
         {
             PolinomioLagrange poli = new PolinomioLagrange();
             int cantelem = int.Parse(textBox1.Text);
-            int grado = int.Parse(textBox2.Text);
             int valor = int.Parse(textBox3.Text);
             double[] vect = new double[cantelem];
             double[,] matriz = new double[cantelem, 2];
@@ -97,8 +96,8 @@ namespace WindowsFormsApp1
                 //vectores con elementos formados. x e y.
 
             }
-           double result=  poli.PoliL(vectoruno, vectordos, valor, grado);
-            Operaciones.Text += "Valor del polinomio" + ":" + result + Environment.NewLine;
+           double result=  poli.PoliL(vectoruno, vectordos, valor);
+            Operaciones.Text += "Valor del polinomio" + " : " + result + Environment.NewLine;
         }
 
         private void Button3_Click(object sender, EventArgs e)

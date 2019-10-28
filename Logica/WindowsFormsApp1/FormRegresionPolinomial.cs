@@ -69,9 +69,9 @@ namespace WindowsFormsApp1
             if (regresionp.ST!=0)
             {
                 double corr = Math.Sqrt(Math.Abs((regresionp.ST - regresionp.SR) / regresionp.ST)) * 100;
-                Operaciones.Text += "Valor del coeficiente de correlacion"  + " : " + corr + Environment.NewLine;
-                Operaciones.Text += "Valor de ST" + ":" + regresionp.ST + Environment.NewLine;
-                Operaciones.Text += "Valor de SR" + ":" + regresionp.SR + Environment.NewLine;
+                Operaciones.Text += "Valor de r"  + " : " + corr + Environment.NewLine;
+                Operaciones.Text += "Valor de ST" + " : " + regresionp.ST + Environment.NewLine;
+                Operaciones.Text += "Valor de SR" + " : " + regresionp.SR + Environment.NewLine;
             }           
             else if (regresionp.ST == 0)
             {

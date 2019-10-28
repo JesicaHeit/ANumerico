@@ -8,15 +8,16 @@ namespace Logica
 {
     public class PolinomioLagrange
     {
-        public double PoliL(double[] x, double[] y, int v, int grado)
+        public double PoliL(double[] x, double[] y, int v)
         {
 
             double fvalor = 0;
-            int[] lx = new int[grado];
-            int i = 0, n = grado;
+            int n = x.Length;
+            int[] lx = new int[n];
+            int i = 0, grado = n - 1;
 
 
-            while (i <= n - 1)
+            while (i <= grado)
             {
                 int j = 0;
                 double L = 1;
