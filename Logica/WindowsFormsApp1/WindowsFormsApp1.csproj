@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormSimpson3OctavosSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimpson3OctavosSimple.Designer.cs">
+      <DependentUpon>FormSimpson3OctavosSimple.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBiseccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,8 +112,35 @@
     <Compile Include="FormSecante.Designer.cs">
       <DependentUpon>FormSecante.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSimpson1tercioMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimpson1tercioMultiple.Designer.cs">
+      <DependentUpon>FormSimpson1tercioMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSimpson1TercioSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimpson1TercioSimple.Designer.cs">
+      <DependentUpon>FormSimpson1TercioSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrapecioMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrapecioMultiple.Designer.cs">
+      <DependentUpon>FormTrapecioMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrapecioSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrapecioSimple.Designer.cs">
+      <DependentUpon>FormTrapecioSimple.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormSimpson3OctavosSimple.resx">
+      <DependentUpon>FormSimpson3OctavosSimple.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBiseccion.resx">
       <DependentUpon>FormBiseccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +170,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSecante.resx">
       <DependentUpon>FormSecante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimpson1tercioMultiple.resx">
+      <DependentUpon>FormSimpson1tercioMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimpson1TercioSimple.resx">
+      <DependentUpon>FormSimpson1TercioSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrapecioMultiple.resx">
+      <DependentUpon>FormTrapecioMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrapecioSimple.resx">
+      <DependentUpon>FormTrapecioSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

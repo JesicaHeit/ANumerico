@@ -91,5 +91,41 @@ namespace WindowsFormsApp1
             form.Owner = this;
             form.ShowDialog();
         }
+
+        private void TrapecioSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTrapecioSimple form = new FormTrapecioSimple();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void TrapecioMultipleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTrapecioMultiple form = new FormTrapecioMultiple();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void Simpson13SimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSimpson1TercioSimple form = new FormSimpson1TercioSimple();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void Simpson13MultipleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSimpson1tercioMultiple form = new FormSimpson1tercioMultiple();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void Simpsopn38SimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FormSimpson3OctavosSimple form = new FormSimpson3OctavosSimple();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

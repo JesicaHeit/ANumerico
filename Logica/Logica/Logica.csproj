@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biseccion.cs" />
+    <Compile Include="Simpson1tercio.cs" />
+    <Compile Include="Simpson1tercioMultiple.cs" />
+    <Compile Include="Simpson3octavosSimple.cs" />
+    <Compile Include="TrapezoideMultiple.cs" />
     <Compile Include="GaussJordan.cs" />
     <Compile Include="GaussSeidel.cs" />
     <Compile Include="NewtonRaphson.cs" />
@@ -53,6 +57,7 @@
     <Compile Include="RegresionPolinomial.cs" />
     <Compile Include="Salida.cs" />
     <Compile Include="Secante.cs" />
+    <Compile Include="TrapezoideSimple.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,11 +41,16 @@
             this.uNIDADN3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresionLinealToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresionPolinomialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polinomioDeLagrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uNIDADN4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.polinomioDeLagrangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trapecioSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trapecioMultipleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpson13SimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpson13MultipleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simpsopn38SimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -140,19 +145,32 @@
             // regresionLinealToolStripMenuItem
             // 
             this.regresionLinealToolStripMenuItem.Name = "regresionLinealToolStripMenuItem";
-            this.regresionLinealToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.regresionLinealToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.regresionLinealToolStripMenuItem.Text = "Regresion Lineal";
             this.regresionLinealToolStripMenuItem.Click += new System.EventHandler(this.RegresionLinealToolStripMenuItem_Click);
             // 
             // regresionPolinomialToolStripMenuItem
             // 
             this.regresionPolinomialToolStripMenuItem.Name = "regresionPolinomialToolStripMenuItem";
-            this.regresionPolinomialToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.regresionPolinomialToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.regresionPolinomialToolStripMenuItem.Text = "Regresion Polinomial";
             this.regresionPolinomialToolStripMenuItem.Click += new System.EventHandler(this.RegresionPolinomialToolStripMenuItem_Click);
             // 
+            // polinomioDeLagrangeToolStripMenuItem
+            // 
+            this.polinomioDeLagrangeToolStripMenuItem.Name = "polinomioDeLagrangeToolStripMenuItem";
+            this.polinomioDeLagrangeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.polinomioDeLagrangeToolStripMenuItem.Text = "Polinomio de Lagrange";
+            this.polinomioDeLagrangeToolStripMenuItem.Click += new System.EventHandler(this.PolinomioDeLagrangeToolStripMenuItem_Click);
+            // 
             // uNIDADN4ToolStripMenuItem
             // 
+            this.uNIDADN4ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trapecioSimpleToolStripMenuItem,
+            this.trapecioMultipleToolStripMenuItem,
+            this.simpson13SimpleToolStripMenuItem,
+            this.simpson13MultipleToolStripMenuItem,
+            this.simpsopn38SimpleToolStripMenuItem});
             this.uNIDADN4ToolStripMenuItem.Name = "uNIDADN4ToolStripMenuItem";
             this.uNIDADN4ToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.uNIDADN4ToolStripMenuItem.Text = "UNIDAD N° 4";
@@ -192,12 +210,40 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Albrecht Eugenia - Heit Jesica";
             // 
-            // polinomioDeLagrangeToolStripMenuItem
+            // trapecioSimpleToolStripMenuItem
             // 
-            this.polinomioDeLagrangeToolStripMenuItem.Name = "polinomioDeLagrangeToolStripMenuItem";
-            this.polinomioDeLagrangeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.polinomioDeLagrangeToolStripMenuItem.Text = "Polinomio de Lagrange";
-            this.polinomioDeLagrangeToolStripMenuItem.Click += new System.EventHandler(this.PolinomioDeLagrangeToolStripMenuItem_Click);
+            this.trapecioSimpleToolStripMenuItem.Name = "trapecioSimpleToolStripMenuItem";
+            this.trapecioSimpleToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.trapecioSimpleToolStripMenuItem.Text = "Trapecio Simple";
+            this.trapecioSimpleToolStripMenuItem.Click += new System.EventHandler(this.TrapecioSimpleToolStripMenuItem_Click);
+            // 
+            // trapecioMultipleToolStripMenuItem
+            // 
+            this.trapecioMultipleToolStripMenuItem.Name = "trapecioMultipleToolStripMenuItem";
+            this.trapecioMultipleToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.trapecioMultipleToolStripMenuItem.Text = "Trapecio Multiple";
+            this.trapecioMultipleToolStripMenuItem.Click += new System.EventHandler(this.TrapecioMultipleToolStripMenuItem_Click);
+            // 
+            // simpson13SimpleToolStripMenuItem
+            // 
+            this.simpson13SimpleToolStripMenuItem.Name = "simpson13SimpleToolStripMenuItem";
+            this.simpson13SimpleToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.simpson13SimpleToolStripMenuItem.Text = "Simpson 1/3 Simple";
+            this.simpson13SimpleToolStripMenuItem.Click += new System.EventHandler(this.Simpson13SimpleToolStripMenuItem_Click);
+            // 
+            // simpson13MultipleToolStripMenuItem
+            // 
+            this.simpson13MultipleToolStripMenuItem.Name = "simpson13MultipleToolStripMenuItem";
+            this.simpson13MultipleToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.simpson13MultipleToolStripMenuItem.Text = "Simpson 1/3 Multiple";
+            this.simpson13MultipleToolStripMenuItem.Click += new System.EventHandler(this.Simpson13MultipleToolStripMenuItem_Click);
+            // 
+            // simpsopn38SimpleToolStripMenuItem
+            // 
+            this.simpsopn38SimpleToolStripMenuItem.Name = "simpsopn38SimpleToolStripMenuItem";
+            this.simpsopn38SimpleToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.simpsopn38SimpleToolStripMenuItem.Text = "Simpson 3/8 Simple";
+            this.simpsopn38SimpleToolStripMenuItem.Click += new System.EventHandler(this.Simpsopn38SimpleToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -238,6 +284,11 @@
         private System.Windows.Forms.ToolStripMenuItem regresionLinealToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regresionPolinomialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem polinomioDeLagrangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trapecioSimpleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trapecioMultipleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simpson13SimpleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simpson13MultipleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem simpsopn38SimpleToolStripMenuItem;
     }
 }
 
