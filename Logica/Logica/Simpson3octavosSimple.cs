@@ -21,7 +21,10 @@ namespace Logica
             //return (Math.Pow(x, 3)) + 2;
             //return ((1 / (x + 0.5)) + ((1 / 4) * Math.Pow(x, 2)));
             //return (Math.Log(1 + Math.Pow(x, 2)));
-            return ((Math.Exp(x)) * (1 - 0.5 * Math.Pow(x, 2)));
+            //return (Math.Pow(Math.E, x)) * (1 - Math.Pow(0.5, 2));
+            double div = (1 / 16);
+            double div1 = (1 / 4);
+            return ((((-3 / 4) * (Math.Pow(x, 2))) - x + 4) - ((div * Math.Pow(x, 4)) - (div1 * Math.Pow(x, 3))));
         }
         public double integral(double extremoizquierdo, double extremoderecho)
         {
