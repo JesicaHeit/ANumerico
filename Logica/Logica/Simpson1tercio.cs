@@ -19,17 +19,18 @@ namespace Logica
             //return Math.Abs(Math.Pow(x,2) - 4) + 2 * x;
             //return (0.2 + 25 * x - 200 * (Math.Pow(x, 2)) + 675 * (Math.Pow(x, 3)) - 900 * (Math.Pow(x, 4)) + 400 * (Math.Pow(x, 5)));
             //return (Math.Asin(x));
-            //return ((1 / (x + 0.5)) + ((1 / 4) * Math.Pow(x, 2)));
+            //return ((1 / (x + 0.5)) + ((0.25) * Math.Pow(x, 2)));
             //return (Math.Log(1 + Math.Pow(x, 2)));
-            return ((Math.Exp(x)) * (1 - 0.5 * Math.Pow(x, 2)));
-            
+            return ((Math.Pow(2.71828, x)) * (1 - 0.5* Math.Pow(x,2)));
+            //return (((-0.75) * Math.Pow(x, 2)) - x + 4) - (((0.0625) * Math.Pow(x, 4)) - ((0.25) * Math.Pow(x, 3)));
+
 
         }
         public double integral(double extremoizquierdo, double extremoderecho)
         {
             double h = (extremoderecho - extremoizquierdo) / 2;
             double x1 = (extremoizquierdo + extremoderecho) / 2;
-            double suma = (f(extremoizquierdo) + (4 * f(x1)) + f(extremoderecho)) * (h/3);
+            double suma = (h/3) * (f(extremoizquierdo) + (4 * f(x1)) + f(extremoderecho));
             return suma;
         }
     }
